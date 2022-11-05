@@ -16,4 +16,14 @@ public class UserController {
 		public String landing() {
 			return "Landing.jsp";
 		}
+		
+		@GetMapping("/signup")
+		public String create_account() {
+			return "CreateAccount.jsp";
+		}
+		
+		@GetMapping("/login")
+		public String login() {
+			return "Login.jsp";
+		}
 }

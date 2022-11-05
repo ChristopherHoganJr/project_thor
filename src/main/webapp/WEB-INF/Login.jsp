@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Project Thor</title>
+<title>Project Thor - Login</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -45,15 +45,21 @@
 			<div class="row">
 				<div class="col">
 					<h1>
-						Project <span class="heroHeadingSpan">{Code Named}</span> Thor
+						Login - Project <span class="heroHeadingSpan">{Code
+							Named}</span> Thor
 					</h1>
-					<p>The project that for the real athletes wanting to document
-						their training without having to pay huge corporate
-						advertisements. Using this project will continue to be free while
-						under initial development and accounts made in this development
-						period will have special access to new features even after we've
-						officially launched. Thank you for using our project to help smash
-						your fitness goals!</p>
+					<form action="">
+						<div class="mb-3">
+							<label for="email" class="form-label">Email address:</label> <input
+								type="email" class="form-control" id="email"
+								placeholder="name@example.com">
+						</div>
+						<div class="mb-3">
+							<label for="password" class="form-label">Password:</label> <input
+								type="password" class="form-control" id="password">
+						</div>
+						<button class="btn btn-success">Login</button>
+					</form>
 				</div>
 			</div>
 		</div>

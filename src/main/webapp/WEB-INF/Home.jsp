@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Project Thor - Create Account</title>
+<title>Project Thor - Home</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -45,35 +45,9 @@
 			<div class="row">
 				<div class="col">
 					<h1>
-						Sign Up - Project <span class="heroHeadingSpan">{Code
-							Named}</span> Thor
+						Home - Logged In | Project <span class="heroHeadingSpan">{Code Named}</span> Thor
 					</h1>
-					<form:form action="/signup/register_account" method="post" modelAttribute="new_user">
-						<div class="mb-3">
-							<form:label path="email" class="form-label">Email address:</form:label> 
-							<form:input
-								type="email" class="form-control" path="email"
-								placeholder="name@example.com" />
-						</div>
-						<div class="mb-3">
-							<form:label path="username" class="form-label">Username:</form:label> 
-							<form:input
-								type="text" class="form-control" path="username"
-								placeholder="Bench500" />
-						</div>
-						<div class="mb-3">
-							<form:label path="password" class="form-label">Password:</form:label> 
-							<form:input
-								type="password" class="form-control" path="password" />
-						</div>
-						<div class="mb-3">
-							<form:label path="confirmPw" class="form-label">Confirm
-								Password:</form:label> 
-							<form:input type="password" class="form-control"
-								path="confirmPw" />
-						</div>
-						<button class="btn btn-success">Create Account</button>
-					</form:form>
+					<p>You're logged in</p>
 				</div>
 			</div>
 		</div>
@@ -85,4 +59,3 @@
 		crossorigin="anonymous"></script>
 </body>
 </html>
-

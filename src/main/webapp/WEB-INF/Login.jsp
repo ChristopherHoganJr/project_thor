@@ -48,18 +48,20 @@
 						Login - Project <span class="heroHeadingSpan">{Code
 							Named}</span> Thor
 					</h1>
-					<form action="">
+					<form:form action="/login/authenticate_user" method="post" modelAttribute="login_user">
 						<div class="mb-3">
-							<label for="email" class="form-label">Email address:</label> <input
-								type="email" class="form-control" id="email"
-								placeholder="name@example.com">
+							<form:label path="email" class="form-label">Email address:</form:label> 
+							<form:input
+								type="email" class="form-control" path="email"
+								placeholder="name@example.com" />
 						</div>
 						<div class="mb-3">
-							<label for="password" class="form-label">Password:</label> <input
-								type="password" class="form-control" id="password">
+							<form:label path="password" class="form-label">Password:</form:label> 
+							<form:input
+								type="password" class="form-control" path="password" />
 						</div>
 						<button class="btn btn-success">Login</button>
-					</form>
+					</form:form>
 				</div>
 			</div>
 		</div>

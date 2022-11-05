@@ -51,12 +51,14 @@
 					<form:form action="/login/authenticate_user" method="post" modelAttribute="login_user">
 						<div class="mb-3">
 							<form:label path="email" class="form-label">Email address:</form:label> 
+							<form:errors path="email" />
 							<form:input
 								type="email" class="form-control" path="email"
 								placeholder="name@example.com" />
 						</div>
 						<div class="mb-3">
 							<form:label path="password" class="form-label">Password:</form:label> 
+							<form:errors path="password" />
 							<form:input
 								type="password" class="form-control" path="password" />
 						</div>

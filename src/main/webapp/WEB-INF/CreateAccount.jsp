@@ -48,29 +48,30 @@
 						Sign Up - Project <span class="heroHeadingSpan">{Code
 							Named}</span> Thor
 					</h1>
-					<form:form action="/signup/register_account" method="post" modelAttribute="new_user">
+					<form:form action="/signup/register_account" method="post"
+						modelAttribute="new_user">
 						<div class="mb-3">
-							<form:label path="email" class="form-label">Email address:</form:label> 
-							<form:input
-								type="email" class="form-control" path="email"
+							<form:label path="email" class="form-label">Email address:</form:label>
+							<form:errors path="email" />
+							<form:input type="email" class="form-control" path="email"
 								placeholder="name@example.com" />
 						</div>
 						<div class="mb-3">
-							<form:label path="username" class="form-label">Username:</form:label> 
-							<form:input
-								type="text" class="form-control" path="username"
+							<form:label path="username" class="form-label">Username:</form:label>
+							<form:errors path="username" />
+							<form:input type="text" class="form-control" path="username"
 								placeholder="Bench500" />
 						</div>
 						<div class="mb-3">
-							<form:label path="password" class="form-label">Password:</form:label> 
-							<form:input
-								type="password" class="form-control" path="password" />
+							<form:label path="password" class="form-label">Password:</form:label>
+							<form:errors path="password" />
+							<form:input type="password" class="form-control" path="password" />
 						</div>
 						<div class="mb-3">
 							<form:label path="confirmPw" class="form-label">Confirm
-								Password:</form:label> 
-							<form:input type="password" class="form-control"
-								path="confirmPw" />
+								Password:</form:label>
+							<form:errors path="confirmPw" />
+							<form:input type="password" class="form-control" path="confirmPw" />
 						</div>
 						<button class="btn btn-success">Create Account</button>
 					</form:form>

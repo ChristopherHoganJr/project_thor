@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -47,7 +48,8 @@
 					<h1>
 						Hello, <c:out value="${current_user.username}" />
 					</h1>
-					<h2>Your current weight is <c:out value="${current_stats.weight}"/></h2>
+					<h2>Your last recorded weight is: <c:out value="${current_stats.weight}"/>kg</h2>
+					<h2>Your current BMI is: <fmt:formatNumber type="number" maxFractionDigits="2" value="${current_stats.weight/current_stats.height/current_stats.height*10000 }"/></h2>
 				</div>
 			</div>
 		</div>

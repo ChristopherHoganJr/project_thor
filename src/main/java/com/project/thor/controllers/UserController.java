@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.project.thor.models.Basic_Stats;
 import com.project.thor.models.Login_User;
 import com.project.thor.models.User;
+import com.project.thor.services.Basic_StatsService;
 import com.project.thor.services.UserService;
 
 @Controller
@@ -20,6 +22,9 @@ public class UserController {
 
 	@Autowired
 	private UserService userServ;
+
+	@Autowired
+	private Basic_StatsService bsServ;
 
 	@GetMapping("/")
 	public String landing() {
@@ -44,8 +49,6 @@ public class UserController {
 			session.setAttribute("user_id", new_user.getId());
 			return "redirect:/home";
 		}
-
-		
 	}
 
 	@GetMapping("/login")
@@ -68,7 +71,16 @@ public class UserController {
 	}
 
 	@GetMapping("/home")
-	public String home() {
+	public String home(HttpSession session, Model model) {
+		Long user_id = (Long) session.getAttribute("user_id");
+		if (user_id == null) {
+			return "redirect:/";
+		}
+		User current_user = userServ.findOneUser(user_id);
+		model.addAttribute("current_user", current_user);
+		Basic_Stats current_stats = bsServ.findMostRecentBS(user_id);
+		model.addAttribute("current_stats", current_stats);
+
 		return "Home.jsp";
 	}
 }

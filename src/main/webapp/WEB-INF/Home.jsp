@@ -30,24 +30,24 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-auto mb-2 mt-2 mb-lg-0 mt-lg-0 gap-3">
 					<li class="nav-item"><a class="nav-link btn btn-warning"
-						aria-current="page" href="/signup">Sign Up</a></li>
+						aria-current="page" href="/workouts">Workouts</a></li>
 					<li class="nav-item"><a
-						class="nav-link btn btn-success text-light" aria-current="page"
-						href="/login">Login</a></li>
+						class="nav-link btn btn-success text-light"
+						href="/logout">Log Out</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<!-- Hero Section -->
+	<!-- Welcome Section -->
 	<section>
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<h1>
-						Home - Logged In | Project <span class="heroHeadingSpan">{Code Named}</span> Thor
+						Hello, <c:out value="${current_user.username}" />
 					</h1>
-					<p>You're logged in</p>
+					<h2>Your current weight is <c:out value="${current_stats.weight}"/></h2>
 				</div>
 			</div>
 		</div>
